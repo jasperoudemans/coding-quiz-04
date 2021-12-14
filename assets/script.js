@@ -1,5 +1,5 @@
 var time = document.getElementById("time");
-var seconds = 10;
+var seconds = 61;
 var startButton = document.getElementById("startBtn");
 var question = document.getElementById("question1");
 var firstQuestion = "What kind of language is JavaScript?";
