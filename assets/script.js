@@ -1,5 +1,5 @@
 var time = document.getElementById("time");
-var seconds = 61;
+var seconds = 60;
 var startButton = document.getElementById("startBtn");
 var question = document.getElementById("question1");
 var firstQuestion = "What kind of language is JavaScript?";
@@ -17,20 +17,22 @@ question.textContent =
 console.log(question.textContent);
 
 function startTime() {
+  time.textContent = seconds;
   var interval = setInterval(function () {
     if (seconds == 0) {
       clearInterval(interval);
     } else {
       seconds--;
       time.textContent = seconds;
-      question.textContent = firstQuestion;
-      optionA.textContent = firstOption;
-      optionB.textContent = secondOption;
-      optionC.textContent = thirdOption;
-      optionD.textContent = fourthOption;
+
       // stopQuiz();
     }
   }, 1000);
+  question.textContent = firstQuestion;
+  optionA.textContent = firstOption;
+  optionB.textContent = secondOption;
+  optionC.textContent = thirdOption;
+  optionD.textContent = fourthOption;
 }
 
 startButton.addEventListener("click", startTime);
