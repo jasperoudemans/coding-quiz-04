@@ -10,6 +10,7 @@ const firstQuestion = {
     "A markup language",
     "An assembly language",
   ],
+  correctIndex: 1,
 };
 
 const secondQuestion = {
@@ -20,9 +21,23 @@ const secondQuestion = {
     "A markup language",
     "An assembly language",
   ],
+  correctIndex: 2,
 };
 
-const questionsArray = [firstQuestion, secondQuestion];
+const thirdQuestion = {
+  questionText: "What kind of language is CSS?",
+  options: [
+    "A styling language",
+    "A programming language",
+    "A markup language",
+    "An assembly language",
+  ],
+  correctIndex: 0,
+};
+
+const questionsArray = [firstQuestion, secondQuestion, thirdQuestion];
+
+let currentIndex = 0;
 
 function renderQuestion(index) {
   const question = questionsArray[index];
@@ -50,8 +65,22 @@ function startTime() {
 }
 
 startButton.addEventListener("click", startTime);
+let score = 0;
+
 document.querySelectorAll(".selectBtn").forEach((button) => {
-  button.addEventListener("click", () => renderQuestion(1));
+  button.addEventListener("click", (e) => {
+    const optionIndex = e.currentTarget.getAttribute("data-index");
+    const isCorrectOption =
+      optionIndex == questionsArray[currentIndex].correctIndex;
+
+    if (isCorrectOption) {
+      score += 100;
+    }
+
+    console.log({ isCorrectOption, optionIndex, currentIndex, score });
+    currentIndex++;
+    renderQuestion(currentIndex);
+  });
 });
 
 // function nextQuestion() {

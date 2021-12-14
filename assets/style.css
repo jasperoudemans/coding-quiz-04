@@ -90,11 +90,10 @@
   border: var(--border);
   border-radius: var(--border-radius);
   padding: 3px;
-  display: inline;
 }
 
 .inline {
-  display: inline;
+  display: flex;
 }
 
 .scoreDiv {
