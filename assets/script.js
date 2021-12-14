@@ -1,20 +1,37 @@
 var time = document.getElementById("time");
 var seconds = 60;
 var startButton = document.getElementById("startBtn");
-var question = document.getElementById("question1");
-var firstQuestion = "What kind of language is JavaScript?";
-var optionA = document.getElementById("option1");
-var optionB = document.getElementById("option2");
-var optionC = document.getElementById("option3");
-var optionD = document.getElementById("option4");
-var firstOption = "A styling language ";
-var secondOption = "A programming language";
-var thirdOption = "A markup language";
-var fourthOption = "An assembly language";
 
-question.textContent =
-  "Press the Start button to begin testing your knowledge of JavaScript";
-console.log(question.textContent);
+const firstQuestion = {
+  questionText: "What kind of language is JavaScript?",
+  options: [
+    "A styling language",
+    "A programming language",
+    "A markup language",
+    "An assembly language",
+  ],
+};
+
+const secondQuestion = {
+  questionText: "What kind of language is HTML?",
+  options: [
+    "A potato language",
+    "A programming language",
+    "A markup language",
+    "An assembly language",
+  ],
+};
+
+const questionsArray = [firstQuestion, secondQuestion];
+
+function renderQuestion(index) {
+  const question = questionsArray[index];
+  document.getElementById("question1").textContent = question.questionText;
+
+  question.options.forEach((option, index) => {
+    document.getElementById("option" + index).textContent = option;
+  });
+}
 
 function startTime() {
   time.textContent = seconds;
@@ -28,15 +45,15 @@ function startTime() {
       // stopQuiz();
     }
   }, 1000);
-  question.textContent = firstQuestion;
-  optionA.textContent = firstOption;
-  optionB.textContent = secondOption;
-  optionC.textContent = thirdOption;
-  optionD.textContent = fourthOption;
+
+  renderQuestion(0);
 }
 
 startButton.addEventListener("click", startTime);
+document.querySelectorAll(".selectBtn").forEach((button) => {
+  button.addEventListener("click", () => renderQuestion(1));
+});
 
-function nextQuestion() {
-  questionCard = quetionArray[i++];
-}
+// function nextQuestion() {
+//   questionCard = quetionArray[i++];
+// }
