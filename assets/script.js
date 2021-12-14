@@ -66,6 +66,7 @@ function startTime() {
 
 startButton.addEventListener("click", startTime);
 let score = 0;
+let currentScore = document.getElementById("score");
 
 document.querySelectorAll(".selectBtn").forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -75,6 +76,9 @@ document.querySelectorAll(".selectBtn").forEach((button) => {
 
     if (isCorrectOption) {
       score += 100;
+      currentScore.textContent = "SCORE: " + score;
+    } else {
+      currentScore.textContent = "SCORE: " + score;
     }
 
     console.log({ isCorrectOption, optionIndex, currentIndex, score });
@@ -82,7 +86,3 @@ document.querySelectorAll(".selectBtn").forEach((button) => {
     renderQuestion(currentIndex);
   });
 });
-
-// function nextQuestion() {
-//   questionCard = quetionArray[i++];
-// }
