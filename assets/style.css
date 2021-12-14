@@ -1,114 +1,106 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
-    --width: 40%;
-    --border: 3px solid aqua;
-    --border-radius: 5px;
-    --card-color: rgb(229, 143, 143);
-    --padding: 3px;
-    font-size: 16px;
-    background-color: rgb(65, 89, 90);
+  --width: 40%;
+  --border: 3px solid aqua;
+  --border-radius: 5px;
+  --card-color: rgb(229, 143, 143);
+  --padding: 3px;
+  font-size: 16px;
+  background-color: rgb(65, 89, 90);
 }
 
 .scoresNtimer {
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .scoresDiv {
-    font-size: 20px;
-    margin-left: 4rem;
-    background-color: var(--card-color);
-    border: var(--border);
-    border-radius: var(--border-radius);
-    padding: var(--padding);
+  font-size: 20px;
+  margin-left: 4rem;
+  background-color: var(--card-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
 }
 
-.startDiv {
-    font-size: 20px;
-    background-color: var(--card-color);
-    text-align: center;
-    border: var(--border);
-    border-radius: var(--border-radius);
+#startBtn {
+  font-size: 20px;
+  background-color: var(--card-color);
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
-
-.startDiv li {
-    list-style-type: none;
-    padding: var(--padding)
-}
-
 
 #time {
-    font-size: 3rem;
-    margin: 4rem;
-    background-color: var(--card-color);
-    padding: var(--padding);
-    border: var(--border);
-    border-radius: var(--border-radius);
+  font-size: 3rem;
+  margin: 4rem;
+  background-color: var(--card-color);
+  padding: var(--padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .questOpScores {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .questionDiv {
-    height: 200px;
-    width: var(--width);
-    font-size: 20px;
-    background-color: var(--card-color);
-    text-align: center;
-    border: var(--border);
-    border-radius: var(--border-radius);
+  height: 200px;
+  width: var(--width);
+  font-size: 20px;
+  background-color: var(--card-color);
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .questionDiv p {
-    margin: 10px;
+  margin: 10px;
 }
 
 .optionsDiv {
-    width: var(--width);
-    background-color: var(--card-color);
-    text-align: center;
-    border: var(--border);
-    border-radius: var(--border-radius);
+  width: var(--width);
+  background-color: var(--card-color);
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .list li {
-    margin: 0;
-    font-size: 20px;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    padding: 3px;
+  margin: 0;
+  font-size: 20px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 3px;
 }
 
 .scoreDiv {
-    font-size: 20px;
-    width: var(--width);
-    background-color: var(--card-color);
-    text-align: center;
-    border: var(--border);
-    border-radius: var(--border-radius);
+  font-size: 20px;
+  width: var(--width);
+  background-color: var(--card-color);
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .scoreDiv p {
-    margin: 10px;
+  margin: 10px;
 }
-
