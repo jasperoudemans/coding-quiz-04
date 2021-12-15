@@ -8,6 +8,7 @@ of the player is dynamically generated and increments by 100 points per correct 
 answers nor to store scores in local storage. 
 
 ## screenshot of the deployed application
+![Screen Shot 2021-12-14 at 10 52 16 PM](https://user-images.githubusercontent.com/88591791/146131613-d5b35e75-93e8-4f6f-a15a-c9d414cabc79.png)
 
 
 ## link to the deployed application
